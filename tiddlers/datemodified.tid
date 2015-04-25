@@ -1,0 +1,32 @@
+title: $:/macros/butitsnotme/datemodified.js
+Type: application/javascript
+module-type: macro
+
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+var moment = require("$:/plugins/butitsnotme/momentjs/moment.js");
+
+exports.name = "datemodified";
+
+exports.params = [
+  { name: "format" },
+];
+
+/*
+Run the macro
+*/
+exports.run = function(format) {
+  if (undefined !== format && 'calendar' === format) {
+    return moment(document.lastModified).calendar();
+  } else if (undefined !== format) {
+    return moment(document.lastModified).format(format);
+  } else {
+    return moment(document.lastModified).toString();
+  }
+};
+
+})();

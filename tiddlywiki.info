@@ -1,0 +1,16 @@
+{
+	"description": "Demo of the Markdown plugin",
+	"plugins": [
+		"butitsnotme/momentjs"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite"
+	],
+	"includeWikis": [
+	],
+	"build": {
+		"index": [
+			"--rendertiddler","$:/core/save/all","momentjsdemo.html","text/plain"]
+	}
+}

@@ -1,0 +1,24 @@
+title: MomentJSExample
+
+This shows is a brief example showing the use of moment.js in TiddlyWiki5.
+
+A small javascript macro called `datemodified` allows us to insert the date
+the document was modified at any point in any tiddler, see the site subtitle
+for an example using the calendar function.
+
+This:
+
+```
+<<datemodified>>
+<<datemodified calendar>>
+<<datemodified YYYY>>
+```
+
+Shows up like this:
+
+<<datemodified>>
+
+<<datemodified calendar>>
+
+<<datemodified YYYY>>
+
